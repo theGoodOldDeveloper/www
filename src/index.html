@@ -1002,7 +1002,7 @@
                     <h1 style="color: aliceblue;">E-mail:</h1>
                   </li>
                   <li  style="color: aliceblue;">
-                  <h3  style="color: aliceblue;"></h3>
+                  <h4  style="color: aliceblue;" id="secEmail"></h4>
                   </li>
                   
                   <!-- <li><a href="about.html">About us</a></li>
@@ -1018,7 +1018,7 @@
                     <h1 style="color: aliceblue;">Mobile:</h1>
                   </li>
                   <li  style="color: aliceblue;">
-                    <h3  style="color: aliceblue;"></h3>
+                    <h4  style="color: aliceblue;" id="secMobile"></h4>
                     </li>
                 </ul>
                 <!-- <form action="#">
@@ -1040,7 +1040,19 @@
 
     </div>
   </div>
-
+  
+  <!-- //NOTE My Scripts -->
+  <script>
+  const secretE = ['horvath', 'lion', 'gm', 'ail', 'com']
+  const secretM = ['44', '73', '76', '178', '861']
+  const secretE0 = `${secretE[0]}${secretE[1]}@${secretE[2]}${secretE[3]}.${secretE[4]}`
+  const secretM0 = `+${secretM[0]} ${secretM[1]}${secretM[2]} ${secretM[3]} ${secretM[4]}`
+  const secretEs = btoa(secretE0)
+  const secretMs = btoa(secretM0)
+  
+  document.getElementById("secEmail").innerHTML = atob(secretEs)
+  document.getElementById("secMobile").innerHTML = atob(secretMs)
+  </script>
 
 
   <!-- All JS files -->
